@@ -1,4 +1,4 @@
-package app.hesias.WeatherTogether.Service;
+package app.hesias.WeatherTogether.Service.Utilisateur;
 
 import app.hesias.WeatherTogether.Model.Utilisateur;
 import app.hesias.WeatherTogether.Repository.UtilisateurRepo;
@@ -20,6 +20,11 @@ public class UtilisateurServiceImpl implements UtilisateurService {
     @Override
     public void createUser(Utilisateur user) {
         userRepo.save(user);
+    }
+
+    @Override
+    public void createUsers(List<Utilisateur> users) {
+        userRepo.saveAll(users);
     }
 
     @Override

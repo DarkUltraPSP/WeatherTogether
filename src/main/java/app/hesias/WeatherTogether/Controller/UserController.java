@@ -1,7 +1,7 @@
 package app.hesias.WeatherTogether.Controller;
 
 import app.hesias.WeatherTogether.Model.Utilisateur;
-import app.hesias.WeatherTogether.Service.UtilisateurService;
+import app.hesias.WeatherTogether.Service.Utilisateur.UtilisateurService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,6 +21,11 @@ public class UserController {
     @PostMapping
     public void createUser(@RequestBody Utilisateur user) {
         userService.createUser(user);
+    }
+
+    @PostMapping("/list")
+    public void createUsers(@RequestBody List<Utilisateur> users) {
+        userService.createUsers(users);
     }
 
     @GetMapping("/{id}")

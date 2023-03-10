@@ -1,4 +1,4 @@
-package app.hesias.WeatherTogether.Service;
+package app.hesias.WeatherTogether.Service.Utilisateur;
 
 import app.hesias.WeatherTogether.Model.Utilisateur;
 
@@ -8,8 +8,8 @@ public interface UtilisateurService {
 
 List<Utilisateur> getAllUsers();
 void createUser(Utilisateur user);
+void createUsers(List<Utilisateur> users);
 Utilisateur getUserById(int id);
 Utilisateur updateUser(int id, Utilisateur user);
 void deleteUser(int id);
-
 }
