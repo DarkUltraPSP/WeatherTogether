@@ -24,4 +24,5 @@ public class Report {
     @ManyToOne
     @JoinColumn(name = "weather_id")
     private Weather weather;
+    private String username;
 }
