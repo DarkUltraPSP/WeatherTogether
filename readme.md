@@ -14,3 +14,5 @@ COMMIT;
 
 * Repeat interval : toutes les heures
 ``` FREQ=HOURLY;BYHOUR=1 ```
+
+* Un fichier collecction.json est disponible dans le dossier src/main/resources/postman pour importer les requêtes dans Postman.
