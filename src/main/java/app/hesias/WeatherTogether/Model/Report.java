@@ -1,6 +1,7 @@
 package app.hesias.WeatherTogether.Model;
 
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -25,4 +26,14 @@ public class Report {
     @JoinColumn(name = "weather_id")
     private Weather weather;
     private String username;
+
+    @Builder
+    public Report(LocalDateTime dateReport, double latitude, double longitude, double temperature, Weather weather, String username) {
+        this.dateReport = dateReport;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.temperature = temperature;
+        this.weather = weather;
+        this.username = username;
+    }
 }

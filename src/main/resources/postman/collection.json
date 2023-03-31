@@ -7,180 +7,6 @@
 	},
 	"item": [
 		{
-			"name": "User",
-			"item": [
-				{
-					"name": "FindAll",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Wakling Dead\",\r\n    \"description\": \"Lorem Ipsum\",\r\n    \"seasons\": \"5\",\r\n    \"release\": \"15/02/2001\",\r\n    \"image\": \"q\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/user",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"user"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "FindByID",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Wakling Dead\",\r\n    \"description\": \"Lorem Ipsum\",\r\n    \"seasons\": \"5\",\r\n    \"release\": \"15/02/2001\",\r\n    \"image\": \"q\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/user/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"user",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Create",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"username\" : \"Test\",\r\n    \"phone\" : \"0780102030\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/user",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"user"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "CreateList",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "[\r\n    {\r\n        \"username\": \"Nero\",\r\n        \"phone\": \"0102030405\"\r\n    },\r\n    {\r\n        \"username\": \"Alice\",\r\n        \"phone\": \"0612345678\"\r\n    },\r\n    {\r\n        \"username\": \"Bob\",\r\n        \"phone\": \"0601020304\"\r\n    },\r\n    {\r\n        \"username\": \"Claire\",\r\n        \"phone\": \"0656789012\"\r\n    },\r\n    {\r\n        \"username\": \"David\",\r\n        \"phone\": \"0678901234\"\r\n    },\r\n    {\r\n        \"username\": \"Eva\",\r\n        \"phone\": \"0645678901\"\r\n    },\r\n    {\r\n        \"username\": \"Frank\",\r\n        \"phone\": \"0689012345\"\r\n    },\r\n    {\r\n        \"username\": \"Gabriel\",\r\n        \"phone\": \"0623456789\"\r\n    },\r\n    {\r\n        \"username\": \"Hannah\",\r\n        \"phone\": \"0690123456\"\r\n    },\r\n    {\r\n        \"username\": \"Isaac\",\r\n        \"phone\": \"0634567890\"\r\n    }\r\n]",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/user/list",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"user",
-								"list"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Update",
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"username\" : \"TestModif\",\r\n    \"phone\" : \"0504030201\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/user/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"user",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Delete",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/user/2",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"user",
-								"2"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
 			"name": "Weather",
 			"item": [
 				{
@@ -189,12 +15,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/weather",
-							"protocol": "http",
+							"raw": "{{ipAPI}}/weather",
 							"host": [
-								"localhost"
+								"{{ipAPI}}"
 							],
-							"port": "8080",
 							"path": [
 								"weather"
 							]
@@ -208,12 +32,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/weather/1",
-							"protocol": "http",
+							"raw": "{{ipAPI}}/weather/1",
 							"host": [
-								"localhost"
+								"{{ipAPI}}"
 							],
-							"port": "8080",
 							"path": [
 								"weather",
 								"1"
@@ -237,12 +59,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/weather",
-							"protocol": "http",
+							"raw": "{{ipAPI}}/weather",
 							"host": [
-								"localhost"
+								"{{ipAPI}}"
 							],
-							"port": "8080",
 							"path": [
 								"weather"
 							]
@@ -257,7 +77,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "[\r\n    {\r\n        \"weather\": \"Neige\"\r\n    },\r\n    {\r\n        \"weather\": \"Ensoleillé\"\r\n    },\r\n    {\r\n        \"weather\": \"Pluvieux\"\r\n    },\r\n    {\r\n        \"weather\": \"Brouillard\"\r\n    },\r\n    {\r\n        \"weather\": \"Couvert\"\r\n    },\r\n    {\r\n        \"weather\": \"Partiellement couvert\"\r\n    },\r\n    {\r\n        \"weather\": \"Eclaircies avec pluie\"\r\n    },\r\n    {\r\n        \"weather\": \"Orageux\"\r\n    },\r\n    {\r\n        \"weather\": \"Vent fort\"\r\n    },\r\n    {\r\n        \"weather\": \"Chaud et humide\"\r\n    },\r\n    {\r\n        \"weather\": \"Froid et sec\"\r\n    },\r\n    {\r\n        \"weather\": \"Tempête de neige\"\r\n    },\r\n    {\r\n        \"weather\": \"Bruine\"\r\n    }\r\n]",
+							"raw": "[\r\n    {\r\n        \"id\": \"1\",\r\n        \"weather\": \"Ciel bleu\"\r\n    },\r\n    {\r\n        \"id\": \"2\",\r\n        \"weather\": \"Quelques nuages\"\r\n    },\r\n    {\r\n        \"id\": \"3\",\r\n        \"weather\": \"Eclaircies\"\r\n    },\r\n    {\r\n        \"id\": \"4\",\r\n        \"weather\": \"Couvert\"\r\n    },\r\n    {\r\n        \"id\": \"5\",\r\n        \"weather\": \"Brouillard\"\r\n    },\r\n    {\r\n        \"id\": \"6\",\r\n        \"weather\": \"Averses\"\r\n    },\r\n    {\r\n        \"id\": \"7\",\r\n        \"weather\": \"Pluie\"\r\n    },\r\n    {\r\n        \"id\": \"8\",\r\n        \"weather\": \"Neige\"\r\n    }\r\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -265,12 +85,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/weather/list",
-							"protocol": "http",
+							"raw": "{{ipAPI}}/weather/list",
 							"host": [
-								"localhost"
+								"{{ipAPI}}"
 							],
-							"port": "8080",
 							"path": [
 								"weather",
 								"list"
@@ -294,12 +112,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/weather/103",
-							"protocol": "http",
+							"raw": "{{ipAPI}}/weather/103",
 							"host": [
-								"localhost"
+								"{{ipAPI}}"
 							],
-							"port": "8080",
 							"path": [
 								"weather",
 								"103"
@@ -314,12 +130,10 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/weather/52",
-							"protocol": "http",
+							"raw": "{{ipAPI}}/weather/52",
 							"host": [
-								"localhost"
+								"{{ipAPI}}"
 							],
-							"port": "8080",
 							"path": [
 								"weather",
 								"52"
@@ -339,12 +153,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/report",
-							"protocol": "http",
+							"raw": "{{ipAPI}}/report",
 							"host": [
-								"localhost"
+								"{{ipAPI}}"
 							],
-							"port": "8080",
 							"path": [
 								"report"
 							]
@@ -358,15 +170,64 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/report/1",
-							"protocol": "http",
+							"raw": "{{ipAPI}}/report/1",
 							"host": [
-								"localhost"
+								"{{ipAPI}}"
 							],
-							"port": "8080",
 							"path": [
 								"report",
 								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Nearby",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ipAPI}}/report/radius/45.7670734/3.1323305/20",
+							"host": [
+								"{{ipAPI}}"
+							],
+							"path": [
+								"report",
+								"radius",
+								"45.7670734",
+								"3.1323305",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "OrderByTemp",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ipAPI}}/report/temp",
+							"host": [
+								"{{ipAPI}}"
+							],
+							"path": [
+								"report",
+								"temp"
 							]
 						}
 					},
@@ -378,12 +239,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/report/count",
-							"protocol": "http",
+							"raw": "{{ipAPI}}/report/count",
 							"host": [
-								"localhost"
+								"{{ipAPI}}"
 							],
-							"port": "8080",
 							"path": [
 								"report",
 								"count"
@@ -399,7 +258,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"date\": \"2023-03-09T12:30:00\",\r\n    \"latitude\": 48.8566,\r\n    \"longitude\": 2.3522,\r\n    \"temperature\": 15.5,\r\n    \"weather\": {\r\n        \"id\": 103\r\n    }\r\n}",
+							"raw": "{\r\n    \"date\": \"2023-03-09T12:30:00\",\r\n    \"latitude\": 45.7280,\r\n    \"longitude\": 3.2310,\r\n    \"temperature\": 15.5,\r\n    \"weather\": {\r\n        \"id\": 1\r\n    },\r\n    \"username\" : \"Nero\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -407,15 +266,38 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/user/list",
-							"protocol": "http",
+							"raw": "{{ipAPI}}/report",
 							"host": [
-								"localhost"
+								"{{ipAPI}}"
 							],
-							"port": "8080",
 							"path": [
-								"user",
-								"list"
+								"report"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateList",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\": \"2023-03-09T12:30:00\",\r\n    \"latitude\": 45.7280,\r\n    \"longitude\": 3.2310,\r\n    \"temperature\": 15.5,\r\n    \"weather\": {\r\n        \"id\": 1\r\n    },\r\n    \"username\" : \"Nero\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ipAPI}}/report",
+							"host": [
+								"{{ipAPI}}"
+							],
+							"path": [
+								"report"
 							]
 						}
 					},
@@ -436,12 +318,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/report/1",
-							"protocol": "http",
+							"raw": "{{ipAPI}}/report/1",
 							"host": [
-								"localhost"
+								"{{ipAPI}}"
 							],
-							"port": "8080",
 							"path": [
 								"report",
 								"1"
@@ -456,12 +336,10 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/report/1",
-							"protocol": "http",
+							"raw": "{{ipAPI}}/report/1",
 							"host": [
-								"localhost"
+								"{{ipAPI}}"
 							],
-							"port": "8080",
 							"path": [
 								"report",
 								"1"
@@ -471,6 +349,12 @@
 					"response": []
 				}
 			]
+		}
+	],
+	"variable": [
+		{
+			"key": "domain",
+			"value": "192.168.1.44"
 		}
 	]
 }

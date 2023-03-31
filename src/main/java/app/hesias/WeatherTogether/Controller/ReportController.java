@@ -14,23 +14,33 @@ public class ReportController {
     private final ReportService reportService;
 
     @GetMapping
-    public List<Report> getAllUsers() {
+    public List<Report> getAllReports() {
         return reportService.getReports();
     }
 
-    @GetMapping("/{id}")
-    public Report getReportById(@PathVariable int id) {
-        return reportService.getReportById(id);
+    @GetMapping("/user/{username}")
+    public List<Report> getReportsByUsername(@PathVariable String username) {
+        return reportService.getReportsByUsername(username);
     }
 
-    @GetMapping("/count")
-    public long getReportCount() {
-        return reportService.getReportCount();
+    @GetMapping("/radius/{latitude}/{longitude}/{radius}")
+    public List<Report> getReportsByRadius(@PathVariable double latitude, @PathVariable double longitude, @PathVariable double radius) {
+        return reportService.getReportsByRadius(latitude, longitude, radius);
+    }
+
+    @GetMapping("/temp")
+    public List<Report> getReportsOrderByTemp() {
+        return reportService.getReportsOrderByTemp();
     }
 
     @PostMapping
     public void createReport(@RequestBody Report report) {
         reportService.createReport(report);
+    }
+
+    @PostMapping("/list")
+    public void createReports(@RequestBody List<Report> reports) {
+        reportService.createReports(reports);
     }
 
     @PutMapping("/{id}")

@@ -1,6 +1,7 @@
 package app.hesias.WeatherTogether.Model;
 
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -16,4 +17,9 @@ public class Weather {
     @Column(name = "weather_id", nullable = false)
     private int id;
     private String weather;
+
+    @Builder
+    public Weather(String weather) {
+        this.weather = weather;
+    }
 }
