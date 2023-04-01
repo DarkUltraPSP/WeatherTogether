@@ -1,5 +1,6 @@
 Pour créer la base de données, le dump se trouve dans le dossier src/main/resources/db
-Un cron job est a ajouter en plus du dump. Toutes les heures, il va supprimer tous les reports de plus de 24h.
+
+* Un cron job est a ajouter en plus du dump. Toutes les heures, il va supprimer tous les reports de plus de 24h.
 
 Dans SLQDev :
 * Allez dans la base de données,
