@@ -16,3 +16,5 @@ COMMIT;
 ``` FREQ=HOURLY;BYHOUR=1 ```
 
 * Un fichier collecction.json est disponible dans le dossier src/main/resources/postman pour importer les requêtes dans Postman.
+
+* Modifier les crédentials dans le fichier application.properties pour qu'ils correspondent a l'adresse de votre DB Oracle
